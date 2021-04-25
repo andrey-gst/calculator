@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Calculator Test Suite" parallel="methods" thread-count="2">
+    <test name="Calculator Tests">
+        <!-- <groups>
+            <run>
+                <include name="first"/>
+            </run>
+        </groups> -->
+        <packages>
+            <package name="com.epam.learn"></package>
+        </packages>
+    </test>
+</suite>
