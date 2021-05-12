@@ -2,6 +2,7 @@ package com.epam.junit;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class DivCulcTest extends BaseTest {
     @Test
@@ -10,10 +11,10 @@ public class DivCulcTest extends BaseTest {
         assertEquals(3, result);
     }
 
-    @Test
-    public void sevenDivZero() {
+    @Test (expected = NumberFormatException.class)
+    public void sevenDivZeroExpectedException() {
         long result = calculactor.div(7, 0);
-
+        fail("Divide by zero exception did not throw!");
     }
 
     @Test

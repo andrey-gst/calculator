@@ -10,10 +10,9 @@ public class DivCulcTest extends BaseTest {
         Assert.assertEquals(result, 3, "Wrong division 6 : 2");
     }
 
-    @Test
-    public void sevenDivZero() {
+    @Test (expectedExceptions = NumberFormatException.class)
+    public void sevenDivZeroExpectedException() {
         long result = calculactor.div(7, 0);
-
     }
 
     @Test
